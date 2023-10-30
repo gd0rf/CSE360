@@ -33,7 +33,7 @@ public class Main extends Application { //Gannon Gebauer
         launch(args);
     }
     
-    //function that conrtolls the scene
+    //function that controlls the scene
     @Override
     public void start(Stage primaryStage) { //Gannon Gebauer
     	//variable that controlls the scene
@@ -134,7 +134,15 @@ public class Main extends Application { //Gannon Gebauer
         }
         
     }
-    
+	public void cleanUserInfo() { //Cameron Cho
+	    File cacheDir = context.getCacheDir();
+	    File[] files = cacheDir.listFiles();
+
+	    if (files != null) {
+    	    for (File file : files)
+            file.delete();
+	    }
+    }
     
 }
 
