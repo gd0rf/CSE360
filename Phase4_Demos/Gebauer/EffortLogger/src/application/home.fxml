@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main$MainController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="530.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Main$MainController">
    <children>
       <Text layoutX="18.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EffotLogger">
          <font>
@@ -74,6 +74,11 @@
       </Button>
       <Text layoutX="2.0" layoutY="494.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4. Unless you are done for the day, it is best to perform steps 1 and 2 above before resuming work." wrappingWidth="335.0" />
       <Button layoutX="236.0" layoutY="25.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="92.0" text="Logout" onAction="#logout">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="330.0" layoutY="25.0" mnemonicParsing="false" text="Check for Security Updates" onAction="#checkForSecurityUpdates">
          <font>
             <Font size="15.0" />
          </font>

@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="soebes.itf.jupiter.extension.maven" type="repository">
+    <properties maven-id="com.soebes.itf.jupiter.extension:itf-extension-maven:0.11.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/itf-extension-maven-0.11.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/maven-model-3.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/plexus-utils-3.0.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/junit-platform-commons-1.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

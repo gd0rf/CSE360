@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="github.codeteapot.maven.plugin.testing.harness.junit.jupiter" type="repository">
+    <properties maven-id="com.github.codeteapot.maven.plugin-testing:maven-plugin-testing-harness-junit-jupiter:1.1.1" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/maven-plugin-testing-harness-junit-jupiter-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/maven-plugin-testing-harness-api-1.1.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
