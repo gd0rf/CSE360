@@ -1,4 +1,5 @@
 # CSE360
+Final Project Submission
 
-
-Login/Authentication system instructions can be found in /Phase4_Demos/Gebauer/README.md
+Team: TU39
+Members: Gannon Gebauer, Hassan Bassel Hassan Moustafa, Aly Shiha, Ahmed Kilani, Cameron Cho
