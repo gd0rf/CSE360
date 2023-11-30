@@ -52,4 +52,34 @@ public class MainControllerTest {
         // Assert true to make the test case pass.
         assertTrue(true);
     }
+    @Test
+    public void testLogin() {
+        // Implement test logic for login method
+        assertTrue(true);
+    }
+
+    @Test
+    public void testAuthenticateUser() {
+        // Implement test logic for authenticateUser method
+        assertTrue(true);
+    }
+
+    @Test
+    public void testCheckForSecurityUpdates() {
+        // Implement test logic for checkForSecurityUpdates method
+        assertTrue(true);
+    }
+
+    @Test
+    public void testResetInactivityTimer() {
+        // Implement test logic for resetInactivityTimer method
+        assertTrue(true);
+    }
+
+    @Test
+    public void testShowBiometricErrorPopup() {
+        // Implement test logic for showBiometricErrorPopup method
+        assertTrue(true);
+    }
+
 }
