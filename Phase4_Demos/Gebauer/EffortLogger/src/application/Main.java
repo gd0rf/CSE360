@@ -64,7 +64,7 @@ public class Main extends Application { //Gannon Gebauer
         launch(args);
     }
     
-    //function that conrtolls the scene
+    //function that controlls the scene
     @Override
     public void start(Stage primaryStage) { //Gannon Gebauer
     	//variable that controlls the scene
