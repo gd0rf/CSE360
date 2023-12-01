@@ -52,7 +52,7 @@ import javafx.scene.input.KeyEvent;
 
 
 public class Main extends Application { //Gannon Gebauer
-	//creates primary stage
+    //creates primary stage
     public Stage primaryStage;
     public Main mainApp;
     public static int daysFor2FASetup = 7;
@@ -63,11 +63,11 @@ public class Main extends Application { //Gannon Gebauer
     public static void main(String[] args) { //Gannon Gebauer
         launch(args);
     }
-    
+
     //function that controlls the scene
     @Override
     public void start(Stage primaryStage) { //Gannon Gebauer
-    	//variable that controlls the scene
+        //variable that controlls the scene
         this.primaryStage = primaryStage;
         showMainScene();
     }
@@ -78,44 +78,44 @@ public class Main extends Application { //Gannon Gebauer
     //Provides the intial scene for the EffortLogger screen
     public void showMainScene() { //Gannon Gebauer
         try {
-        	//Calls the login.fxml file to create the scene
-        	FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
+            //Calls the login.fxml file to create the scene
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
             Parent root = loader.load();
-            
+
             //Sets scene parameters
             Scene scene = new Scene(root);
             primaryStage.setTitle("Login Demo-Gebauer,Gannon");
             primaryStage.setScene(scene);
             primaryStage.show();
-            
-            
+
+
             MainController mainController = loader.getController();
             // Pass a reference to the main app to the controller
-            mainController.init(this);  
+            mainController.init(this);
         } catch (Exception e) {
-        	//Catches exceptions and return the trace
+            //Catches exceptions and return the trace
             e.printStackTrace();
         }
     }
-    
+
     //function to show the Home screen
     public void showHomeScene() { //Gannon Gebauer
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("home.fxml"));
             Parent root = loader.load();
-            
+
             //sets the new scene
             Scene scene = new Scene(root);
             primaryStage.setScene(scene);
             primaryStage.show();
-            
-            
-            
+
+
+
             MainController mainController = loader.getController();
             // Pass a reference to the main app to the controller
-            mainController.init(this);  
+            mainController.init(this);
         } catch (Exception e) {
-        	//Catches exceptions and return the trace
+            //Catches exceptions and return the trace
             e.printStackTrace();
         }
     }
@@ -137,7 +137,7 @@ public class Main extends Application { //Gannon Gebauer
 
     //the controller class for interacting with the UI
     public static class MainController { //Gannon Gebauer
-    	//variable allows association with the Main function
+        //variable allows association with the Main function
         public Main mainApp;
         public boolean isPopupShown = false;
         public Timer inactivityTimer;
@@ -151,19 +151,22 @@ public class Main extends Application { //Gannon Gebauer
         public Text daysRemainingText;
 
         //Input from the textfields
-        public TextField usernameTextField;
-	usernameTextField.textProperty().addListener((observable, oldValue, newValue) -> { //Cameron Cho
-            if (newValue.contains("*")) {
-                usernameTextField.setText(oldValue); // Do not allow the character '*'
-            }
-        });
-        public TextField passwordTextField;
-        passwordTextField.textProperty().addListener((observable, oldValue, newValue) -> { //Cameron Cho
-            if (newValue.contains("*")) {
-                passwordTextField.setText(oldValue); // Do not allow the character '*'
-            }
-        });
-	//User object
+        public TextField usernameTextField; //Cameron Cho
+        public TextField passwordTextField; //Cameron Cho
+        private void addTextFieldListeners() { //Cameron Cho
+            usernameTextField.textProperty().addListener((observable, oldValue, newValue) -> {
+                if (newValue.contains("*")) {
+                    usernameTextField.setText(oldValue); // Do not allow the character '*'
+                }
+            });
+
+            passwordTextField.textProperty().addListener((observable, oldValue, newValue) -> { //Cameron Cho
+                if (newValue.contains("*")) {
+                    passwordTextField.setText(oldValue); // Do not allow the character '*'
+                }
+            });
+        }
+        //User object
         public user person;
         private boolean updateNotificationShown = false;
         public static void setDaysFor2FASetup(int days) {
@@ -193,11 +196,12 @@ public class Main extends Application { //Gannon Gebauer
             mainApp.getPrimaryStage().getScene().addEventFilter(KeyEvent.KEY_PRESSED, event -> resetInactivityTimer());
 
             setupInactivityWarning(); // Setup inactivity warning - Hassan Moustafa
+            addTextFieldListeners();
         }
         public void setupInactivityWarning() { // Setup inactivity timer - Hassan Moustafa
             inactivityTimer = new Timer();
             inactivityTimer.schedule(new TimerTask() {
-                int countdown = 6; //change fof testing
+                int countdown = 60; //change fof testing
 
                 @Override
                 public void run() { // Inactivity timer task - Hassan Moustafa
