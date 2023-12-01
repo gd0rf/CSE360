@@ -152,8 +152,18 @@ public class Main extends Application { //Gannon Gebauer
 
         //Input from the textfields
         public TextField usernameTextField;
+	usernameTextField.textProperty().addListener((observable, oldValue, newValue) -> { //Cameron Cho
+            if (newValue.contains("*")) {
+                usernameTextField.setText(oldValue); // Do not allow the character '*'
+            }
+        });
         public TextField passwordTextField;
-        //User object
+        passwordTextField.textProperty().addListener((observable, oldValue, newValue) -> { //Cameron Cho
+            if (newValue.contains("*")) {
+                passwordTextField.setText(oldValue); // Do not allow the character '*'
+            }
+        });
+	//User object
         public user person;
         private boolean updateNotificationShown = false;
         public static void setDaysFor2FASetup(int days) {
